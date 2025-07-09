@@ -7,7 +7,10 @@ const config: Config = {
         '^@/(.*)$': '<rootDir>/src/$1',
     },
     testMatch: ['**/tests/**/*.test.ts'],
+    setupFilesAfterEnv: ['<rootDir>/tests/setupTests.ts'],
+    moduleDirectories: ['node_modules', 'src'],
     clearMocks: true,
+    verbose: true,
 };
 
 export default config;
