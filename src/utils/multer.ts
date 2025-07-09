@@ -1,5 +1,9 @@
 import multer from 'multer';
 
-const storage = multer.memoryStorage();
+const MAX_FILES_LIMIT = 5;
 
-export const upload = multer({ storage });
+const upload = multer({ storage: multer.memoryStorage() });
+
+const multiUpload = upload.array('files', MAX_FILES_LIMIT);
+
+export { multiUpload }
