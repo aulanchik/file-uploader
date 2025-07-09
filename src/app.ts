@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(cors());
 
-app.get('/api', uploadRoutes);
-app.get('/ping', (req, res) => {
+app.use('/api', uploadRoutes);
+app.use('/ping', (req, res) => {
     res.send('PONG');
 })
 
