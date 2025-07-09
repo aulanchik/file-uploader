@@ -7,6 +7,12 @@
     ],
     "outDir": "./dist",
     "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -24,5 +30,5 @@
     "node_modules",
     "dist",
     "tests"
-  ]
+  ],
 }
