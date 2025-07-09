@@ -7,6 +7,12 @@
     ],
     "outDir": "./dist",
     "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -18,11 +24,14 @@
     "noImplicitAny": true
   },
   "include": [
-    "src/**/*.ts"
+    "src",
+    "tests",
+    "storage",
+    "__mocks___"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "tests"
-  ]
+  ],
 }
